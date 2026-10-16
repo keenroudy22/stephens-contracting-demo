@@ -12,7 +12,7 @@ function download(value,name,type='application/json'){const url=URL.createObject
 function backup(){download(recovery||(blocked?lastRaw||data:data),'stephens-demo-backup-'+new Date().toISOString().slice(0,10)+'.json');toast('Backup downloaded. Keep it to move jobs to another browser.');}
 $('#backup').onclick=backup;
 const job=()=>data.jobs.find(j=>j.id===active);
-function canLeave(){if($('#view').querySelector('input:invalid,textarea:invalid')){toast('Fix the highlighted field before leaving this quote.');return false}return true}
+function canLeave(){if(view!=='editor')return true;const invalid=$('#view').querySelector('input[data-field]:invalid,textarea[data-field]:invalid,input[data-key]:invalid');if(invalid){invalid.focus();invalid.reportValidity();toast('Please correct '+(invalid.getAttribute('aria-label')||invalid.closest('label')?.firstChild?.textContent?.trim()||'the highlighted quote field')+' before leaving this quote.');return false}return true}
 function navigate(next,id=null){if(!canLeave())return;view=next;active=id;document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===(next==='editor'?'jobs':next)));render();window.scrollTo(0,0)}
 document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>navigate(b.dataset.view));
 function recoveryBanner(){return blocked?'<div class="notice warning"><b>Browser storage needs attention.</b> The original data has been preserved. Export a backup above, then reload to read another tab’s changes or reset this demo in Business settings. <button class="secondary" data-action="reload">Export & reload</button></div>':''}
