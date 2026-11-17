@@ -1,0 +1,29 @@
+@media(max-width:600px){
+  button,.button{min-height:44px;padding:11px 14px}
+  input,select,textarea{font-size:16px;min-height:44px}
+  textarea{min-height:110px}
+  .sidebar{padding:16px}
+  .sidebar nav button{min-height:44px;padding:10px 12px}
+  .topbar{display:grid;grid-template-columns:auto auto;align-items:center}
+  #saveStatus{grid-column:1/-1;grid-row:2;margin:2px 0 0;line-height:1.45}
+  .topbar .quiet{min-height:44px;padding:8px 10px}
+  .demo-note{padding-inline:16px;line-height:1.5}
+  .page-head .button-row>button{flex:1;min-width:130px}
+  .cards{grid-template-columns:1fr 1fr}
+  .cost-row{grid-template-columns:1fr 1fr}
+  .cost-row>div:first-child{grid-column:1/-1}
+  .cost-row .line-total{grid-column:1}
+  .cost-row .remove{grid-column:2;min-width:44px;min-height:44px}
+  .detail-grid{grid-template-columns:1fr 1fr}
+  .metric:last-child{grid-column:1/-1}
+  .revision{display:grid;grid-template-columns:1fr}
+  .revision button{width:100%}
+  .print-actions button{flex:1;min-width:140px}
+}
+@media(max-width:360px){
+  .cards{grid-template-columns:1fr}
+  .toolbar select{width:100%;flex-basis:100%}
+  .detail-grid{grid-template-columns:1fr}
+  .metric:last-child{grid-column:auto}
+}
+
