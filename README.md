@@ -1,4 +1,4 @@
-# Stephen's Contracting — public demo
+# Gottabfast LLC — website and quoting demo
 
 Sample-only showcase: a contractor website and a browser-local quoting application. No sign-in, backend, customer messaging or connection to the private office.
 
@@ -17,7 +17,7 @@ All quote data stays in browser localStorage under `stephens-public-demo-v1`. Us
 - Retail references were researched October 15, 2026. Local delivery, stock and summer 2027 pricing are not confirmed. Quantities and labor are editable assumptions, not structural designs.
 - The $33,724.92 deck example requires inspection of the existing structure; new treated-wood and composite scenarios are different.
 - Customer printouts omit internal unit costs, margins, markup and private notes. They remain clearly labeled demo estimates.
-- Business details, payment terms, service offerings and imagery require confirmation. No invented testimonials. Deck imagery is an AI concept, and the bathroom image is attributed stock photography, not completed company work.
+- Gottabfast LLC, 423-290-0351, gottabfast@gmail.com, the Noblesville/Cortez service areas, and the supplied project photography are confirmed inputs. Service radius, business credentials, payment terms and pricing controls still require confirmation. No invented testimonials.
 
 ## Source and deployment
 

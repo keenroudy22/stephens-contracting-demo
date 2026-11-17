@@ -9,7 +9,7 @@
   else{add('Materials','Material','lot');add('Installation labor','Labor','person-hr');add('Other job costs','Other','lot');}return s;
  }
  function makeJob(estimate){const id=uid();return{id,ref:'SC-'+id.slice(0,8).toUpperCase(),status:'Draft',archived:false,created:now(),updated:now(),estimate:copy(estimate),history:[]}}
- function initial(){const deck=E.scenario('resurface');Object.assign(deck,{jobType:'deck',title:'30 × 40 deck — sample quote',customer:'Sample homeowner',location:'Sample property — address to confirm',customerEmail:'',customerPhone:'',validUntil:'',terms:''});const job=makeJob(deck);return{format:'stephens-public-demo-v1',jobs:[job],customers:[],templates:[],profile:{name:"Stephen's Contracting",email:'',phone:'',address:'',terms:'',footer:''}}}
+ function initial(){const deck=E.scenario('resurface');Object.assign(deck,{jobType:'deck',title:'30 × 40 deck — sample quote',customer:'Sample homeowner',location:'Sample property — address to confirm',customerEmail:'',customerPhone:'',validUntil:'',terms:''});const job=makeJob(deck);return{format:'stephens-public-demo-v1',jobs:[job],customers:[],templates:[],profile:{name:'Gottabfast LLC',email:'gottabfast@gmail.com',phone:'423-290-0351',address:'',terms:'',footer:''}}}
  function estimate(s){E.validate(s);if(!['deck','general'].includes(s.jobType))throw Error('Choose a valid job type.');for(const k of ['customerEmail','customerPhone','validUntil','terms'])if(s[k]!==undefined&&(typeof s[k]!=='string'||s[k].length>6000))throw Error('Invalid quote details.');return s}
  function validate(data){
   const str=(v,n)=>typeof v==='string'&&v.length<=n,id=v=>str(v,80)&&/^[\w-]+$/.test(v);
