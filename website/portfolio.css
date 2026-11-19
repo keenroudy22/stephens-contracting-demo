@@ -2,4 +2,5 @@
 @media(max-width:900px){.case{grid-template-columns:1fr}.case-photos{grid-row:auto}.case>.project-caption{margin-top:22px}}
 @media(max-width:700px){.case-grid{gap:48px}.case-photos{gap:8px}.case-photos img,.case-photos img:first-child{height:270px;margin-top:0}.case-photos img:first-child{height:220px;margin-top:25px}.direct-contact a{font-size:25px}.services article h3{margin-top:25px}}
 @media(max-width:480px){.hero-actions .button{width:100%;min-height:48px}.case-photos{grid-template-columns:1fr}.case-photos img,.case-photos img:first-child{height:250px;margin:0}.case-photos img:first-child{height:220px}.project-caption{align-items:flex-start}.direct-contact a{font-size:23px;overflow-wrap:anywhere}.inquiry form button{width:100%;min-height:48px}.footer-top nav a{padding-block:8px}}
+.brand svg{background:url('assets/gottabfast-logo.png') center/cover no-repeat;border:1px solid #d6b477}.brand svg path{display:none}header .brand small{letter-spacing:.16em}
 
